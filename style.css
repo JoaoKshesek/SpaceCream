@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --bg-primary: #8E9AAF;
+    --bg-secondary: #EFF1FF;
+    --bg-tertiary: #CBC0D3;
+    --bg-paletas: #FEEAFA;
+    --bg-desktop: #FFFFFF;
+
+    --ff-title: 'Staatliches', cursive;
+    --ff-p-mobile: 'Palanquin', sans-serif;
+    --ff-p-desktop: 'Roboto', sans-serif;
+    --ff-footer: 'Open Sans', sans-serif;
+
+    --fc-primary: #23053A; 
+    --fc-secondary: #4A4E69;
+    --fc-tertiary: var(--bg-desktop);
+
+    --fs-body: 1.4rem;
+    --fs-heading: 4rem;
+}
+
+body {
+    background: var(--bg-secondary);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: hsl(218, 17%, 62%);
+    height: 28rem;
+    width: 100vw;
+}
+
+header .logo {
+    height: 149px;
+    width: 149px;
+    background-image: url('/img/logo2.svg');
+    margin: 3.2rem 0 2rem 0;
+}
+
+header h1 {
+    color: var(--fc-tertiary);
+    font-weight: 400;
+    font-size: var(--fs-heading);
+    letter-spacing: 0.05em;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+    font-family: var(--ff-title);
+    background: var(--bg-tertiary);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    max-width: 38rem;
+    margin: 5rem auto;
+    
+}
+
+main p {
+    font-family: var(--ff-p-mobile);
+    font-weight: 400;
+    font-size: var(--fs-body);
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--fc-primary);
+    margin: 0 3.2rem 6rem;
+}
+
+.card {
+    position: relative;
+    margin: 0 3.2rem ;
+
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 3.2rem;
+    animation: downtop 700ms 350ms forwards;
+    opacity: 0;
+    transform: translateY(0);
+}
+
+.card span {
+    background: var(--bg-paletas);
+    color: var(--fc-secondary);
+    border-radius: 2rem;
+    font-family: var(--ff-title);
+    font-weight: 400;
+    font-size:20px ;
+    width: fit-content;
+    padding: 1px 23px 0;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    line-height: 34px;
+    letter-spacing: 0.05em;
+    animation: topdown 700ms 350ms forwards;
+    opacity: 0;
+    transform: translateY(0);
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
